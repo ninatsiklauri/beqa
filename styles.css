@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    display: block;
+}
+/* header */
+header {
+    background-color: #ffffff;
+}
+.container {
+    margin-top: 50px;
+    text-align: center;
+}
+.container a {
+    color: #000000;
+    font-family:  "Forma DJR Display Bold", sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+/* hovers */
+.container a:hover{
+    color: #474747;
+    transition: 0.5s;
+}
+.nav-link a:hover{
+    color: #474747;
+    transition: 0.5s;
+}
+/* navigation */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 8vh;     
+}
+nav:hover{
+    color: #474747;
+}
+.nav-link{
+    display: flex;
+    justify-content: space-around;
+    width: 11%;
+    font-size: 13px;
+    font-family: "Forma DJR Display Bold", sans-serif;
+    padding-top: 50px;
+}
+.nav-link a{
+    color: #000000;
+    font-weight: 600;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: #000000;
+    margin: 5px;
+}
+@media screen and (max-width:1024px){
+    .nav-link{
+        width: 20%;
+    }
+}
+@media screen and (max-width: 700px){
+    body{
+        overflow-x: hidden;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .container{
+        margin-left: 10px;
+        margin-top: 25PX;
+    }
+    h1 a{
+        align-items: center;
+    }
+    .nav-link{
+        position: absolute;
+        right: 0px;
+        height: 20vh;
+        top: 10vh;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-link li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+        margin-top: 25px;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+.img-container{
+    width: 80%;
+}
+.img-container .image{
+    width: 400px;
+    height: 500px;
+}
